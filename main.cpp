@@ -1,31 +1,44 @@
-/** @file */
 #include <iostream>
+#include <string>
+#include "Wav.h"
+#include "Processor.h"
+#include "Limiter.h"
+#include "Echo.h"
+#include "noiseGate.h"
 
-/**
- * \brief   The function bar.
- *
- * \details This function does something which is doing nothing. So this text
- *          is totally senseless and you really do not need to read this,
- *          because this text is basically saying nothing.
- *
- * \note    This text shall only show you, how such a \"note\" section
- *          is looking. There is nothing which really needs your notice,
- *          so you do not really need to read this section.
- *
- * \param[in]     a    Description of parameter a.
- * \param[out]    b    Description of the parameter b.
- * \param[in,out] c    Description of the parameter c.
- *
- * \return        The error return code of the function.
- *
- * \retval        ERR_SUCCESS    The function is successfully executed
- * \retval        ERR_FAILURE    An error occurred
- */
-void fn(){
-
-}
-
+const std::string testfile = "testing.wav";
+const std::string echofile = "echos.wav";
+const std::string limitfile = "limit.wav";
+const std::string noisefile = "noise.wav";
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    // Uncomment these lines when ready.
+
+    Wav wav;
+   
+    wav.readFile(testfile);
+//    std::cout << wav.getBufferSize() << std::endl;
+    Processor *processor = new Echo(30000);
+    processor->processBuffer(wav.getBuffer(),wav.getBufferSize());
+    wav.writeFile("echos.wav");
+
+    delete processor;
+//
+//    Follow the pattern above to generate the limit and noise files
+//    using the filenames provided
+
+    wav.readFile(testfile);
+    Limiter *limiter = new Limiter;
+    limiter->processBuffer(wav.getBuffer(),wav.getBufferSize());
+    wav.writeFile("limit.wav");
+
+    delete limiter;
+
+    wav.readFile(testfile);
+    Noise *noise = new Noise(3);
+    noise->processBuffer(wav.getBuffer(),wav.getBufferSize());
+    wav.writeFile("noise.wav");
+
+    delete noise;
+
     return 0;
 }
