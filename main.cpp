@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 #include "Wav.h"
-#include "Processor.h"
 #include "Limiter.h"
 #include "Echo.h"
 #include "noiseGate.h"
+#include "IfileProcessing.h"
 
 const std::string testfile = "testing.wav";
 const std::string echofile = "echos.wav";
@@ -17,11 +17,11 @@ int main() {
    
     wav.readFile(testfile);
 //    std::cout << wav.getBufferSize() << std::endl;
-    Processor *processor = new Echo(30000);
-    processor->processBuffer(wav.getBuffer(),wav.getBufferSize());
+    Echo *echo = new Echo(30000);
+    echo->processBuffer(wav.getBuffer(),wav.getBufferSize());
     wav.writeFile("echos.wav");
 
-    delete processor;
+    delete echo;
 //
 //    Follow the pattern above to generate the limit and noise files
 //    using the filenames provided

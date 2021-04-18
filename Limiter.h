@@ -2,10 +2,9 @@
 
 #ifndef PROGRAMMING_ASSIGNMENT_LIMITER_H
 #define PROGRAMMING_ASSIGNMENT_LIMITER_H
-#include "Processor.h"
-//#include "IfileProcessor.h"
+#include "IfileProcessing.h"
 
-class Limiter: public Processor {
+class Limiter: public IfileProcessing {
 public: 
 	void processBuffer(unsigned char* buffer, int bufferSize) override;
 //overriding processbuffer to be a limiter

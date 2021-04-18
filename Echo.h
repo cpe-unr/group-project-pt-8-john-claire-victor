@@ -2,10 +2,9 @@
 
 #ifndef PROGRAMMING_ASSIGNMENT_ECHO_H
 #define PROGRAMMING_ASSIGNMENT_ECHO_H
-#include "Processor.h"
-//#include "IfileProcessor.h"
+#include "IfileProcessing.h"
 
-class Echo : public Processor {
+class Echo : public IfileProcessing {
 	int timeDelay;
 public: 
 	Echo(int timeDelay);
