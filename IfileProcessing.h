@@ -1,6 +1,6 @@
 /** Claire Burkhardt
 * CS202 Final Group Project - 4/17/21
-* This file is the interface for all the audio processor files (like echo, noise gate, etc.) and includes the virtual function processBuffer
+* This file is the interface for all the audio processing (like echo, noise gate, etc.) and includes the virtual function processBuffer
 */
 
 //not working right now :(

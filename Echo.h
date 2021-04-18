@@ -1,7 +1,9 @@
-//Created by Claire Burkhardt 3/21/21
+/**Claire Burkhardt; CS202 Final Group Project - 4/17/21
+ * This class is a file processor that overlays an echo on the audio file
+ */
 
-#ifndef PROGRAMMING_ASSIGNMENT_ECHO_H
-#define PROGRAMMING_ASSIGNMENT_ECHO_H
+#ifndef ECHO_H
+#define ECHO_H
 #include "IfileProcessing.h"
 
 class Echo : public IfileProcessing {
@@ -9,8 +11,8 @@ class Echo : public IfileProcessing {
 public: 
 	Echo(int timeDelay);
 	void processBuffer(unsigned char* buffer, int bufferSize) override;
-//overriding processbuffer to be a limiter
-
+/**overrides processbuffer to be an echoer
+*/
 };
 
-#endif //PROGRAMMING_ASSIGNMENT_ECHO_H
+#endif //ECHO_H

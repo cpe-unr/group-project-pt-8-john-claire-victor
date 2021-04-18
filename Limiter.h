@@ -1,14 +1,18 @@
-//Created by Claire Burkhardt 3/21/21
+/**Claire Burkhardt; CS202 Final Group Project - 4/17/21
+ * This class is a file processor that overlays a limiter on the audio file
+ */
 
-#ifndef PROGRAMMING_ASSIGNMENT_LIMITER_H
-#define PROGRAMMING_ASSIGNMENT_LIMITER_H
+#ifndef LIMITER_H
+#define LIMITER_H
 #include "IfileProcessing.h"
 
 class Limiter: public IfileProcessing {
 public: 
 	void processBuffer(unsigned char* buffer, int bufferSize) override;
-//overriding processbuffer to be a limiter
+
+/** Overrides processbuffer to be a limiter
+ */
 
 };
 
-#endif //PROGRAMMING_ASSIGNMENT_LIMITER_H
+#endif //LIMITER_H

@@ -1,3 +1,5 @@
+/** Merges the user interface, file i/o, and audio processing all together
+ */
 #include <iostream>
 #include <string>
 #include "Wav.h"

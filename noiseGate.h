@@ -1,7 +1,9 @@
-//Created by Claire Burkhardt 3/21/21
+/**Claire Burkhardt; CS202 Final Group Project - 4/17/21
+ * This class is a file processor that overlays a noise gate on the audio file
+ */
 
-#ifndef PROGRAMMING_ASSIGNMENT_NOISEGATE_H
-#define PROGRAMMING_ASSIGNMENT_NOISEGATE_H
+#ifndef NOISEGATE_H
+#define NOISEGATE_H
 #include "IfileProcessing.h"
 
 class Noise: public IfileProcessing {
@@ -9,8 +11,8 @@ class Noise: public IfileProcessing {
 public: 
 	Noise(int percent);
 	void processBuffer(unsigned char* buffer, int bufferSize) override;
-//overriding processbuffer to be a limiter
-
+/** Overrides processbuffer to be a limiter
+ */
 };
 
-#endif //PROGRAMMING_ASSIGNMENT_NOISEGATE_H
+#endif //NOISEGATE_H
