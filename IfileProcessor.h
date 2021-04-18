@@ -3,8 +3,10 @@
 * This file is the interface for all the audio processor files (like echo, noise gate, etc.) and includes the cirtual function processBuffer
 */
 
+//not working right now :(
+
 #ifndef IFILEPROCESSOR_H
-#define IFILE PROCESSOR_H
+#define IFILEPROCESSOR_H
 
 
 #include <cstdint>
@@ -16,4 +18,4 @@ public:
 };
 
 
-#endif //IFILEPROCESSOR
+#endif //IFILEPROCESSOR_H

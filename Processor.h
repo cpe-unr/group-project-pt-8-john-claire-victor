@@ -1,10 +1,11 @@
-//
-// Created by Keith Lancaster on 3/13/21.
-//
+/** Claire Burkhardt
+* CS202 Final Group Project - 4/17/21
+* This file is the base class for all the processor functions to be derived from w/ the abstract function processBuffer
+*/
 
-#ifndef PROGRAMMING_ASSIGNMENT_3KL_PROCESSOR_H
-#define PROGRAMMING_ASSIGNMENT_3KL_PROCESSOR_H
-
+#ifndef PROCESSOR_H
+#define PROCESSOR_H
+//#include "IfileProcessor.h"
 
 #include <cstdint>
 #include <cmath>
@@ -15,4 +16,5 @@ public:
 };
 
 
-#endif //PROGRAMMING_ASSIGNMENT_3KL_PROCESSOR_H
+
+#endif //PROCESSOR_H

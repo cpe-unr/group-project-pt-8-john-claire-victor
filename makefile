@@ -4,13 +4,13 @@ audioprocessor: main.cpp wav.o limiter.o echo.o noiseGate.o
 wav.o: Wav.cpp Wav.h WaveHeader.h
 	g++ -c -std=c++11 Wav.cpp
 
-limiter.o: Limiter.cpp Limiter.h
+limiter.o: Limiter.cpp Limiter.h Processor.h
 	g++ -c -std=c++11 Limiter.cpp
 
-echo.o: Echo.cpp Echo.h
+echo.o: Echo.cpp Echo.h Processor.h
 	g++ -c -std=c++11 Echo.cpp
 
-noiseGate.o: noiseGate.cpp noiseGate.h
+noiseGate.o: noiseGate.cpp noiseGate.h Processor.h
 	g++ -c -std=c++11 noiseGate.cpp
 
 clean:
