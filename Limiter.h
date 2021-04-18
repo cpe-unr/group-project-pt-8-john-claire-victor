@@ -4,7 +4,7 @@
 #define PROGRAMMING_ASSIGNMENT_LIMITER_H
 #include "Processor.h"
 
-class Limiter: public Processor {
+class Limiter: public IfileProcessor {
 public: 
 	void processBuffer(unsigned char* buffer, int bufferSize) override;
 //overriding processbuffer to be a limiter

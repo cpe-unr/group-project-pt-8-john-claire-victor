@@ -4,7 +4,7 @@
 #define PROGRAMMING_ASSIGNMENT_ECHO_H
 #include "Processor.h"
 
-class Echo: public Processor {
+class Echo: public ifileProcessor {
 	int timeDelay;
 public: 
 	Echo(int timeDelay);

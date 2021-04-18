@@ -4,7 +4,7 @@
 #define PROGRAMMING_ASSIGNMENT_NOISEGATE_H
 #include "Processor.h"
 
-class Noise: public Processor {
+class Noise: public IfileProcessor {
 	int percent;
 public: 
 	Noise(int percent);
