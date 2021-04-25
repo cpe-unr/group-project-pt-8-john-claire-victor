@@ -7,6 +7,7 @@
 #include "Echo.h"
 #include "noiseGate.h"
 #include "IfileProcessing.h"
+#include "Normalizer.h"
 
 const std::string testfile = "testing.wav";
 const std::string echofile = "echos.wav";
@@ -41,6 +42,11 @@ int main() {
     wav.writeFile("noise.wav");
 
     delete noise;
+
+    wav.readFile(testfile);
+    Normalizer *normalizer = new Normalizer;
+    normalizer->processBuffer(wav.getBuffer(),wav.getBufferSize());
+    wav.writeFile("normalizer.wav");
 
     return 0;
 }
