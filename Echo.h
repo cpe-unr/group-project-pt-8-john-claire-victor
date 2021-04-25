@@ -8,6 +8,8 @@
 
 class Echo : public IfileProcessing {
 	int timeDelay;
+	int Max;
+	int Min;
 public: 
 	Echo(int timeDelay);
 	void processBuffer(unsigned char* buffer, int bufferSize) override;

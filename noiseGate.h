@@ -8,6 +8,7 @@
 
 class Noise: public IfileProcessing {
 	int percent;
+	int minVal, maxVal, zeroVal;
 public: 
 	Noise(int percent);
 	void processBuffer(unsigned char* buffer, int bufferSize) override;

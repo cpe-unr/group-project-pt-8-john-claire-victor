@@ -9,7 +9,7 @@
 #include "IfileProcessing.h"
 #include "Normalizer.h"
 
-const std::string testfile = "testing.wav";
+const std::string testfile = "yes-8-bit-stereo.wav";
 const std::string echofile = "echos.wav";
 const std::string limitfile = "limit.wav";
 const std::string noisefile = "noise.wav";
@@ -20,7 +20,7 @@ int main() {
    
     wav.readFile(testfile);
 //    std::cout << wav.getBufferSize() << std::endl;
-    Echo *echo = new Echo(30000);
+    Echo *echo = new Echo(50000);
     echo->processBuffer(wav.getBuffer(),wav.getBufferSize());
     wav.writeFile("echos.wav");
 
@@ -37,7 +37,7 @@ int main() {
     delete limiter;
 
     wav.readFile(testfile);
-    Noise *noise = new Noise(3);
+    Noise *noise = new Noise(2);
     noise->processBuffer(wav.getBuffer(),wav.getBufferSize());
     wav.writeFile("noise.wav");
 
@@ -48,5 +48,6 @@ int main() {
     normalizer->processBuffer(wav.getBuffer(),wav.getBufferSize());
     wav.writeFile("normalizer.wav");
 
+    delete normalizer;
     return 0;
 }
