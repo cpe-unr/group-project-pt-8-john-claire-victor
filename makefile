@@ -1,20 +1,18 @@
-audioprocessor: main.cpp wav.o limiter.o echo.o noiseGate.o Normalizer.o
-	g++ -std=c++11 main.cpp Wav.o Limiter.o Echo.o noiseGate.o Normalizer.o -o audioprocessor
+ptest: newMain.cpp WavHeader.h FileManager.o EightBit.o SixteenBit.o SoundFile.o
+	g++ -std=c++11 newMain.cpp FileManager.o EightBit.o SixteenBit.o SoundFile.o -o ptest
 
-wav.o: Wav.cpp Wav.h WaveHeader.h
-	g++ -c -std=c++11 Wav.cpp
+FileManager.o: FileManager.cpp FileManager.h WavHeader.h FileInterface.h
+	g++ -c -std=c++11 FileManager.cpp
 
-limiter.o: Limiter.cpp Limiter.h IfileProcessing.h
-	g++ -c -std=c++11 Limiter.cpp
+EightBit.o: EightBit.cpp SoundFile.h WavHeader.h FileInterface.h
+	g++ -c -std=c++11 EightBit.cpp
 
-echo.o: Echo.cpp Echo.h IfileProcessing.h
-	g++ -c -std=c++11 Echo.cpp
+SixteenBit.o: SixteenBit.cpp SoundFile.h WavHeader.h FileInterface.h
+	g++ -c -std=c++11 SixteenBit.cpp
 
-noiseGate.o: noiseGate.cpp noiseGate.h IfileProcessing.h
-	g++ -c -std=c++11 noiseGate.cpp
+SoundFile.o: SoundFile.cpp SoundFile.h WavHeader.h FileInterface.h
+	g++ -c -std=c++11 SoundFile.cpp
 
-normalizer.o: Normalizer.cpp Normalizer.h IfileProcessing.h 
-	g++ -c -std=c++11 Normalizer.cpp
 
 clean:
-	rm *.o audioprocessor
+	rm *.o ptest

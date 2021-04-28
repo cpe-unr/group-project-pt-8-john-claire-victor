@@ -10,8 +10,8 @@
 	WAV_HEADER * FileManager::readHeader(string fname)
 	{
 			
-            WAV_HEADER * ptr = new  WAV_HEADER();
-	    int headerSize = sizeof(wav_hdr);                                                                    
+        WAV_HEADER * ptr = new  WAV_HEADER();
+	int headerSize  =sizeof(wav_hdr);                                                                   
 	    if ( inFile == nullptr )
 	    {                      
 	             cout << "unable to open file" << endl;  
@@ -30,17 +30,17 @@
 			SoundFile* soundPtr = nullptr;
 		        if(wvhdr_ptr-> audioFormat == 1)
 		        {
-			    soundPtr = new EightBit(); //(copy for sixteen bit)
+			    soundPtr = new Eightbit(); //(copy for sixteen bit)
 		        }
 		        else
-			{
-			    soundPtr = new SixteenBit(); //(copy for sixteen bit)
-			}
-			soundPtr->setHeader(wvhdr_ptr);
+				{
+			    soundPtr = new Sixteenbit(); //(copy for sixteen bit)
+				}
+			soundPtr->setHeader(wvhdr_ptr, dirpath);
 			soundPtr->readFile();
-    			dirfiles.push_back(soundPtr);
-	          }
-        }
+    		dirfiles.push_back(soundPtr);
+	    }
+    }
 
 	void FileManager::writeFiles()
 	{
@@ -48,10 +48,10 @@
 		for (int i = 0 ; i < dirfiles.size() ; i++ )
 		{
     			dirfiles[i]->writeFile();
-	         }
-        }
+	    }
+    }
 
-	void addFileName(string f)
+	void FileManager::addFileName(string f)
 	{
 		fileNames.push_back(f);
 	}

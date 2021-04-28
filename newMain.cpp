@@ -28,7 +28,7 @@ int main( int argc, char* argv [])
 			filePath = argv[1];
 			cout << "Input wav file name: " << filePath << endl;
 		}
-		FileManager fmgrObj(dirpath);
+		FileManager fmgrObj(filePath);
 		for(int i = 0 ; i < argc ; i ++)
 		{
 			fmgrObj.addFileName(argv[i]);

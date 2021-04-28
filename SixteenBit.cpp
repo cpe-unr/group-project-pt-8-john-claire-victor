@@ -1,5 +1,10 @@
-	Sixteenbit::Sixteenbit(string n);
-	Sixteenbit::~Sixteenbit();
+#include "SoundFile.h"
 
-	int Sixteenbit::readFile();
-	void Sixteenbit::writeFile();
+
+	Sixteenbit::Sixteenbit(string n){}
+	Sixteenbit::~Sixteenbit(){}
+	Sixteenbit::Sixteenbit(){}
+
+	int Sixteenbit::readFile(){}
+	void Sixteenbit::writeFile(){}
+
