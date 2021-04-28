@@ -21,7 +21,7 @@ public:
 	void printFile();
 	int readFile();
 	void writeFile();
-        void setHeader(WAV_HEADER * obj);
+        void setHeader(WAV_HEADER * obj, string fn);
 	SoundFile(string n);
 	~SoundFile();
 	SoundFile();
