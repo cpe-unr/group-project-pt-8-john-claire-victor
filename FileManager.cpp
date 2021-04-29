@@ -36,7 +36,7 @@
 				{
 			    soundPtr = new Sixteenbit(); //(copy for sixteen bit)
 				}
-			soundPtr->setHeader(wvhdr_ptr, dirpath);
+			soundPtr->setHeader(wvhdr_ptr, fileNames[i]);
 			soundPtr->readFile();
     		dirfiles.push_back(soundPtr);
 	    }
