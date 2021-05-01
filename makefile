@@ -1,4 +1,4 @@
-ptest: newMain.cpp WavHeader.h FileManager.o EightBit.o SixteenBit.o SoundFile.o
+ptest: newMain.cpp WavHeader.h FileManager.o EightBit.o SixteenBit.o SoundFile.o nGateT.h normalizerT.h echoT.h
 	g++ -std=c++11 newMain.cpp FileManager.o EightBit.o SixteenBit.o SoundFile.o -o ptest
 
 FileManager.o: FileManager.cpp FileManager.h WavHeader.h FileInterface.h
