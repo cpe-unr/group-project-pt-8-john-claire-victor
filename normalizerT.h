@@ -51,10 +51,6 @@ class normalizerProcessor {
 
 
     newMultiplier = (absMaxAmplitude / peakAmplitude);
-//    if (newMultiplier != 1) {
-//	newMultiplier = newMultiplier*.87;
-//    }
-//come back to this!
 
 //    std::cout << peakAmplitude << " multiplier " << newMultiplier << std::endl;
     for (int i1 = 0; i1 < bufferSize; ++i1) {
