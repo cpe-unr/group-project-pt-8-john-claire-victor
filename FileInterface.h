@@ -11,7 +11,7 @@
 class FileInterface
 {
 	public:
-		virtual void printFile() =0;
+		virtual void printHeader() =0;
 		virtual int readFile() = 0;
 		virtual void writeFile()= 0;
 };

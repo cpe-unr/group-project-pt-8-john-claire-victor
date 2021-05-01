@@ -11,14 +11,16 @@
 class SoundFile : public FileInterface
 {
 private:
-	FILE* inFile;
-	WAV_HEADER * wavObj;
+	
+protected:
 	string fname;
+	WAV_HEADER * wavObj;
+	FILE* inFile;
 	int fileSize;
 	size_t bytesRead;
 	int getFileSize();
 public:
-	void printFile();
+	virtual void printHeader();
 	int readFile();
 	void writeFile();
         void setHeader(WAV_HEADER * obj, string fn);
@@ -26,25 +28,26 @@ public:
 	~SoundFile();
 	SoundFile();
 };
-
 class Eightbit : public SoundFile
 {
-        char * data;
+       unsigned char* data = NULL;
 public:
 	Eightbit(string n);
+	//void printHeader();
 	~Eightbit();
 	int readFile();
-	void writeFile();
+	void writeFile(const std::string &outFileName);
 	Eightbit();
 private:
 	
 };
 class Sixteenbit : public SoundFile
 {
-       unsigned short * data;
+       unsigned char* data = NULL;
 public:
 	Sixteenbit(string n);
 	~Sixteenbit();
+	//void printHeader();
 	Sixteenbit();
 
 	int readFile();

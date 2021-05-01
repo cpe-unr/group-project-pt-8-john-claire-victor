@@ -29,11 +29,12 @@ int main( int argc, char* argv [])
 			cout << "Input wav file name: " << filePath << endl;
 		}
 		FileManager fmgrObj(filePath);
-		for(int i = 0 ; i < argc ; i ++)
+		for(int i = 1 ; i < argc ; i ++)
 		{
 			fmgrObj.addFileName(argv[i]);
 		}
 		fmgrObj.readFiles();
+		cout << "Finished ReadFiles!" << endl;
 		fmgrObj.printFiles();
 		
 		return 0;

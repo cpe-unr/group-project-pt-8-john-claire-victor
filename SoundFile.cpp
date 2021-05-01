@@ -22,12 +22,14 @@
 
 	void SoundFile::setHeader(WAV_HEADER * obj, string fn)
 	{
+		cout << "setHeader Called!"<< fn << obj << endl;
 		wavObj = obj;
 		bytesRead = sizeof(WAV_HEADER);
 		fname = fn;
 	}
 	int SoundFile::getFileSize()
 	{
+		cout << "Get File Size called."<< inFile << endl;
 		fseek(inFile, 0, SEEK_END);
 	
 		fileSize = ftell(inFile);
@@ -35,8 +37,10 @@
 		fseek(inFile, 0, SEEK_SET);
 		return fileSize;
 	}
-	void SoundFile::printFile()
+	void SoundFile::printHeader()
 	{
+		cout << "bytes per Sample printed: " << wavObj->bitsPerSample << endl;
+		cout << "Print header called."<< wavObj << endl;
 		uint16_t bytesPerSample = wavObj->bitsPerSample / 8;
 		uint64_t numSamples = wavObj->ChunkSize / bytesPerSample;
 		static const uint16_t BUFFER_SIZE = 4096;

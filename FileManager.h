@@ -11,9 +11,9 @@
 class FileManager 
 {
 	private:
-	  vector<SoundFile*> dirfiles;
-	  string dirpath;
-	  vector <string> fileNames;
+	vector<SoundFile*> dirfiles;
+	string dirpath;
+	vector <string> fileNames;
 	FILE* inFile;
 	WAV_HEADER * wavObj;
 
