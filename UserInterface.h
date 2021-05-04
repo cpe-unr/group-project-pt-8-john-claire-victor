@@ -11,6 +11,9 @@
 #ifndef CLASS_USER_INTERFACE_H
 #define CLASS_USER_INTERFACE_H
 
+#include <string>
+#include <vector>
+
 class UserInterface
 {
 private:
@@ -56,6 +59,16 @@ public:
 	void menuSelection(void);
 
 	int chooseAudioProcessing();
+	int userChoosingFile(std::vector <std::string>  &audioFileNameVec);
+	std::string newFile(std::vector <std::string>  &audioFileNameVec);
+	
+	void badExecution();
+	void unfinishedMetadata();
+	void unfinishedCSV();
+	void CSVSuccess();
+	void exitMessage();
+
+	bool keepGoing();
 };
 
 #endif //CLASS_USER_INTERFACE_H

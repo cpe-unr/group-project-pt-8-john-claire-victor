@@ -15,23 +15,20 @@
 using namespace std;
 
 
-int main( int argc, char* argv [])
-{
+int main( int argc, char* argv []) {
+	vector <string> audioFileNameVec;
+	UserInterface mainuser;
 		//WAV_HEADER wavObj;
-		int headerSize = sizeof(wav_hdr), filelength = 0;
+	int headerSize = sizeof(wav_hdr), filelength = 0;
+	int doMore = 1;
 		
 /** this tells the user to input the audio files they'd like to manage */
 
-		const char* filePath;
-		string input;
+	const char* filePath;
+	string input;
 		if (argc <= 1)
 		{
-//			cout << "Input wav file name: ";
-//			cin >> input;
-//			cin.get();
-//			filePath = input.c_str();
-			std::cout << "Proper format: ./ptest audio_file.wav [n times]" << std::endl;
-			std::cout << "Ending program. Please use the above proper format." << std::endl;
+			mainuser.badExecution();
 			return 0;
 		}
 		else
@@ -43,103 +40,111 @@ int main( int argc, char* argv [])
 		for(int i = 1 ; i < argc ; i ++)
 		{
 			fmgrObj.addFileName(argv[i]);
+
+			audioFileNameVec.push_back(argv[i]);
 		}
-		fmgrObj.readFiles();
-		cout << "Finished ReadFiles!Boo" << endl;
-//		fmgrObj.printFiles();
+
+//		fmgrObj.readFiles();
+/**The file I/O in this program is all commented out and replaced with placeholders because the File I/O, while set up, has a segmentation fault that prevents the program from running. **/
+//fmgrObj.printFiles();
 		
 
  /**Next, show the user's options and get their preference **/
-	UserInterface mainuser;
-	mainuser.displayMenu();
-	int userSelection;
-	userSelection = mainuser.typeSelection();
 
-/** Now set up a switch to execute these different options **/
+	do {	
+		mainuser.displayMenu();
+		int userSelection;
+		userSelection = mainuser.typeSelection();
 
-	switch(userSelection) // Uncomment functions when ready to be implemented
-	{
+/** Set up a switch to execute these different options **/
+
+		switch(userSelection) {
 	
-		case 1:
-//process audio
-			int userProcessingSelection;
-			userProcessingSelection = mainuser.chooseAudioProcessing();
-//pick your file
-	//		std::cout << filename[0] << std::endl;
-		//come back to this!!
-	//
+			case 1: {
 
+/** Case 1 is audio processing. First, allow the user to choose the file they want to use **/
+
+				int userChoosenFile;
+				userChoosenFile = mainuser.userChoosingFile(audioFileNameVec);
+
+/**Now, allow the user to pick what type of audio processing they would like **/
+
+				int userProcessingSelection;
+				userProcessingSelection = mainuser.chooseAudioProcessing(); 
 
 				switch(userProcessingSelection) {
-					case 1:
+/**Use this switch to run the audio processing **/
 
-					case 2:
+					case 1: {
+						echoProcessor *echoprocessor = new echoProcessor;
+// 						echoprocessor->processEcho(fmgrObj.getBuffer(), fmgrObj.getBufferSize(), fmgrObj.getNum_Channels());
 
-					case 3:
+// the above code is commented out because it can't compile without working File I/O. The logic behind the audio processing itself was tested as a spike and should be sound.
+    						delete echoprocessor;
+						}
+						break;
+	
+					case 2: {
+						nGateProcessor *ngateprocessor = new nGateProcessor;
+//						ngateprocessor->processNoise(fmgrObj.getBuffer(), fmgrObj.getBufferSize());
+
+// the above code is commented out because it can't compile without working File I/O. The logic behind the audio processing itself was tested as a spike and should be sound.
+    						delete ngateprocessor;
+						}
+						break;
+	
+					case 3: {
+						normalizerProcessor *normalizerprocessor = new normalizerProcessor;
+//						normalizerprocessor->processNormalizer(fmgrObj.getBuffer(), fmgrObj.getBufferSize());
+
+// the above code is commented out because it can't compile without working File I/O. The logic behind the audio processing itself was tested as a spike and should be sound.
+						delete normalizerprocessor;
+						}
+						break;
 
 					case 0:
 						exit;
 						break;
 
 				}
+/** After finishing the technical audio processing, create a new file with the processed audio. First, as the user for a name (and double check that the name isn't a dupe). Then write a new file **/
 
- 
-			break;
-		case 2:
-//modify metadata
-	//		switchuser.displayTypesMenu();
-	//		typeSelection();
-			break;
-		case 3:
-//export csv
-		 
-			break;
-		case 4:
-			//Processor::exportCSV();
+				std::string newFileName;
+				newFileName = mainuser.newFile(audioFileNameVec);
+//				fmgrObj.writeFile("newFileName");
+
+//The above code is commented out because it won't compile without working File I/O.
+
+	 			}
+				break;
+			case 2: {
+	
+				int userChoosenFile1 = mainuser.userChoosingFile(audioFileNameVec);
+
+				mainuser.unfinishedMetadata();
+/** Case 2 is the section of our program that should modify the metadata and then overwrite it. The File I/O for it didn't get set up. **/
+
+				}
+				break;
+			case 3: {
+
+				std::string newFileName1 = mainuser.newFile(audioFileNameVec);
+				mainuser.unfinishedCSV();
+/** Case 3 is the section of our program that should export a CSV file with all the information for all the audio files. The File I/O for it didn't get set up. **/
+				mainuser.CSVSuccess();
+			 	}
+				break;
 			
-		case 0:
-			exit;
-			break;
+			case 0:
+				doMore = 0;
+				mainuser.exitMessage();
+				exit;
+				break;
 		}
 
-
-
-	system("PAUSE");
+	} while (doMore == 1);
 	return 0;
 }
 
 
 
-/**
-const std::string testfile = "yes-8-bit-stereo.wav";
-const std::string echofile = "echos.wav";
-const std::string limitfile = "limit.wav";
-const std::string noisefile = "noise.wav";
-int main() {
-    // Uncomment these lines when ready.
-
-    Wav wav;
-
-    wav.readFile(testfile);
-    echoProcessor *echoprocessor = new echoProcessor;
-    echoprocessor->processEcho(wav.getBuffer(), wav.getBufferSize(), wav.getNum_Channels());
-    wav.writeFile("1Echos.wav");
-    delete echoprocessor;
-
-//    Follow the pattern above to generate the limit and noise files
-//    using the filenames provided
-
-    wav.readFile(testfile);
-    nGateProcessor *ngateprocessor = new nGateProcessor;
-    ngateprocessor->processNoise(wav.getBuffer(), wav.getBufferSize());
-    wav.writeFile("1nGate.wav");
-    delete ngateprocessor;
-
-    wav.readFile(testfile);
-    normalizerProcessor *normalizerprocessor = new normalizerProcessor;
-    normalizerprocessor->processNormalizer(wav.getBuffer(), wav.getBufferSize());
-    wav.writeFile("1Normalizer.wav");
-    delete normalizerprocessor;
-
-    return 0;
-**/

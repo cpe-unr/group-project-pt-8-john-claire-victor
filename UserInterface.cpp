@@ -66,13 +66,12 @@ void UserInterface::displayMenu(void)
 	std::cout << "1. Process Audio" << std::endl;
 	std::cout << "2. Modify Metadata" << std::endl;
 	std::cout << "3. Export CSV" << std::endl;
-//	std::cout << "4. Export CSV" << std::endl;
 	std::cout << "0. EXIT PROGRAM " << std::endl << std::endl; 
 	return;
 }
 
  /** 
-  * If the user does not select an option between 0 and 4, an error message will be displayed and the user will be asked to make a correct selection.
+  * If the user does not select an option between 0 and 3, an error message will be displayed and the user will be asked to make a correct selection.
   * This will loop until the user makes a correct selection.
   */
 
@@ -129,6 +128,7 @@ void UserInterface::displayTypesMenu(void)
 int UserInterface::typeSelection()
 {
 	int userSelectionI;
+	std::cout << "===================" << std::endl;
 	std::cout << "Select an option: ";
 	std::cin >> userSelectionI;
 	std::cout << "" << std::endl;
@@ -163,90 +163,69 @@ int UserInterface::chooseAudioProcessing() {
 
 }
 
-//This is all code that was in the main file of the user interface but didn't work and had some global variables (I think) that it was predicated on
+int UserInterface::userChoosingFile(std::vector <std::string>  &audioFileNameVec) {
 
+	int num = 1;
+	std::cout << "*** SELECT a File To Work With ***"<< std::endl;
+	std::cout << "===================" << std::endl;
 
-/**
- * This function contains the logic for different operations depending on which choice the user
- * selected in the main menu.
- */
-/**
-void UserInterface::menuSelection(void)
-{
-	/**
-	 * A user object is created in order to access functions from the
-	 * \class UserInterface
-	 * class.
-	
-	UserInterface switchuser;
-
-	int selection = 2;
-	std::cout << "selection = 2" << std::endl;
-	switch(selection) // Uncomment functions when ready to be implemented
-	{
-	
-	case 1:
-			switchuser.displayTypesMenu();
-			typeSelection();
-			break;
-		case 2:
-			switchuser.displayTypesMenu();
-			typeSelection();
-			break;
-		case 3:
-			//Processor::playbackAudio();
-			std::cout << "Placeholder 3" << std::endl;
-			break;
-		case 4:
-			//Processor::exportCSV();
-			std::cout << "Placeholder 4" << std::endl;
-		case 0:
-			exit;
-			break;
-	}
+	for (int i = 0; i < audioFileNameVec.size(); i++) {
+		std::cout << "File " << num << ". " << audioFileNameVec[i] << std::endl;
+		num ++;
 }
 
-void typeSelection(void)
-{
-	/**
-	 * A user object is created in order to access functions from the
-	 * \class UserInterface
-	 * class.
-	 
-	UserInterface typeuser;
-
-	selection2 = typeuser.typeSelection(0);
-
-	switch(selection2)
-	{
-		case 1:
-			std::cout << "Placeholder 1" << std::endl;
-			break;
-		case 2:
-			std::cout << "Placeholder 2" << std::endl;
-			break;
-		case 3:
-			std::cout << "Placeholder 3" << std::endl;
-			break;
-		case 4:
-			std::cout << "Placeholder 4" << std::endl;
-			break;
-		case 5:
-			std::cout << "Placeholder 5" << std::endl;
-			break;
-		case 6:
-			std::cout << "Placeholder 6" << std::endl;
-			break;
-		case 7:
-			std::cout << "Placeholder 7" << std::endl;
-			break;
-		case 8:
-			std::cout << "Placeholder 8" << std::endl;
-			break;
-		case 0:
-			exit;
-			break;
-	}
+	int userSelection4 = UserInterface::typeSelection();
+	return userSelection4;
 }
-**/
 
+void UserInterface::badExecution() {
+	std::cout << "Proper format: ./ptest audio_file.wav [n times]" << std::endl;
+	std::cout << "Ending program. Please use the above proper format." << std::endl;
+}
+
+
+std::string UserInterface::newFile(std::vector <std::string>  &audioFileNameVec) {
+	int placeholder = 1;
+	bool sameName = 1;
+	std::string fileName;
+	
+	do {
+		sameName = 1;
+		std::cout << "Select a file name for your new file: ";
+		std::cin >> fileName;
+		std::cout << "" << std::endl;
+	
+		for (int i = 0; i < audioFileNameVec.size(); i++) {
+			if (audioFileNameVec[i] == fileName) {
+				sameName = 0;
+
+			}
+		}
+		if (sameName == 1 ) {
+
+			placeholder = 0;
+		}
+	} while (placeholder == 1);
+	
+	return fileName;
+
+}
+
+void UserInterface::unfinishedMetadata() {
+	std::cout << "This is the part of our program that should change and overrwrite the metadata of a chosen file. The File I/O for it wasn't finished." << std::endl;
+}
+
+void UserInterface::unfinishedCSV() {
+	std::cout << "This is the part of our program that should export a CSV file with all the information for all the audio files. The File I/O for it wasn't finished." << std::endl;
+}
+
+void UserInterface::CSVSuccess() {
+	std::cout << "Success! Your audio files have been exported to a CSV" << std::endl;
+}
+
+void UserInterface::exitMessage() {
+	std::cout << "Thank you for using our program to process your files. Exiting program." << std::endl;
+}
+
+
+//I deleted a ton of code for functions UserInterface and typeSelection and a few others that were built in the main file of the user interface but didn't work when refactored and had some global variables (I think) that they were predicated on. See the folder 'User Interface' for Victor's original version of this User Interface. I modified userSelection and wrote chooseAudioProcessing, userChoosingFile, badExecution, newFile, unfinishedMetadata/CSV, and exitMessage --Claire
