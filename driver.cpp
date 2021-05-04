@@ -26,10 +26,13 @@ int main( int argc, char* argv [])
 		string input;
 		if (argc <= 1)
 		{
-			cout << "Input wav file name: ";
-			cin >> input;
-			cin.get();
-			filePath = input.c_str();
+//			cout << "Input wav file name: ";
+//			cin >> input;
+//			cin.get();
+//			filePath = input.c_str();
+			std::cout << "Proper format: ./ptest audio_file.wav [n times]" << std::endl;
+			std::cout << "Ending program. Please use the above proper format." << std::endl;
+			return 0;
 		}
 		else
 		{
@@ -62,7 +65,7 @@ int main( int argc, char* argv [])
 			int userProcessingSelection;
 			userProcessingSelection = mainuser.chooseAudioProcessing();
 //pick your file
-			std::cout << filename[0] << std::endl;
+	//		std::cout << filename[0] << std::endl;
 		//come back to this!!
 	//
 
