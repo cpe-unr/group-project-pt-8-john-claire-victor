@@ -6,7 +6,6 @@
 		bytesRead = 0;
 		inFile = NULL;
 	}
-	
 	SoundFile::SoundFile(string n)
 	{
 		fname = n;
@@ -14,12 +13,10 @@
 		bytesRead = 0;
 		inFile = NULL;
 	}
-	
 	SoundFile::~SoundFile()
 	{
 		fclose(inFile);
 	}
-
 	void SoundFile::setHeader(WAV_HEADER * obj, string fn)
 	{
 		
@@ -27,6 +24,7 @@
 		bytesRead = sizeof(WAV_HEADER);
 		fname = fn;
 	}
+
 	int SoundFile::getFileSize()
 	{
 		
@@ -61,22 +59,6 @@
 		cout << "Number of Bytes per Second: " << wavObj->bytesPerSec << endl;
 		cout << "Data Length: " << wavObj->subChunk2Size << endl;
 		cout << "Audio Format: " << wavObj->audioFormat << endl;
-	}
-	int SoundFile::readFile()
-	{
-	    /****  DO NOTHING; actual data is read in EightBit and SixteenBit class
-		inFile = fopen(fname.c_str(), "r");
-		int headerSize = sizeof(wav_hdr);
-		if ( inFile == nullptr )
-		{
-			cout << "unable to open file" << endl;
-		}
-		bytesRead = fread(&wavObj, 1, headerSize, inFile);
-			
-		cout << "Header Read: " << bytesRead << " bytes." << endl;
-		
-		return bytesRead;
-		****/
 	}
 
 	void SoundFile::writeFile()

@@ -1,12 +1,11 @@
 #include "FileManager.h"
-
+	
 	FileManager::FileManager(string d)
 	{
 		dirpath = d;
 		inFile = nullptr;
 	}
 	FileManager::~FileManager(){}
-
 
 	WAV_HEADER * FileManager::readHeader(string fname)
 	{
@@ -20,7 +19,7 @@
 	    int bytesRead = fread(wavObj, 1, headerSize, inFile);
 	    return wavObj;
 	}
-
+	
 	void FileManager::readFiles()
 	{
 		//go through dirpath and create and object (for loop) 10 <
@@ -48,7 +47,6 @@
     		dirfiles.push_back(soundPtr);
 	    }
     }
-
 	void FileManager::writeFiles()
 	{
 		//go through dirpath and create and object (for loop) 10 <
@@ -57,7 +55,7 @@
     			dirfiles[i]->writeFile();
 	    }
     }
-
+	
 	void FileManager::addFileName(string f)
 	{
 		fileNames.push_back(f);
