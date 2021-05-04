@@ -7,17 +7,43 @@
   ===================================================================
 */
 
+
+
+/**
+ * The way that that the user input from the menus will be only be able to be used in the main
+ * function, as what was required per the assignment instructions, is that an object
+ * should be created for the \class Processor 
+ * class, and that object will be used to call the
+ * functions, such as analyze and display audio information.
+ *
+ * This keeps these needed functions restricted within the \file main.cpp
+ */
+
 #include <iostream>
 #include "UserInterface.h"
 
+/**
+ * In order to keep logic out of \fn int main(void)
+ * , seperate functions were created to handle the main menu selection and the type submenu
+ * selections.
+ */
 void menuSelection(void);
 void typeSelection(void);
 
 int selection;
 int selection2;
 
+/**
+ * This function contains the logic for different operations depending on which choice the user
+ * selected in the main menu.
+ */
 void menuSelection(void)
 {
+	/**
+	 * A user object is created in order to access functions from the
+	 * \class UserInterface
+	 * class.
+	 */
 	UserInterface switchuser;
 
 	switch(selection) // Uncomment functions when ready to be implemented
@@ -43,8 +69,17 @@ void menuSelection(void)
 	}
 }
 
+/**
+ * This function contains the logic for different operations depending on which choice the user
+ * selected in the types submenu.
+ */
 void typeSelection(void)
 {
+	/**
+	 * A user object is created in order to access functions from the
+	 * \class UserInterface
+	 * class.
+	 */
 	UserInterface typeuser;
 
 	selection2 = typeuser.typeSelection(0);
@@ -83,6 +118,11 @@ void typeSelection(void)
 
 int main(void)
 {
+	/**
+	 * A user object is created in order to access functions from the
+	 * \class UserInterface
+	 * class.
+	 */
 	UserInterface mainuser;
 	mainuser.displayMenu();
 	selection = mainuser.mainSelection(0);
@@ -92,31 +132,3 @@ int main(void)
 	system("PAUSE");
 	return 0;
 }
-
-/*
- The way that that the user input from the menus will be only be able to be used in the main
- function, as what was required per the assignment instructions, is that an object
- should be created for the Processor class, and that object will be used to call the
- functions, such as analyze and display audio information.
-
- Example:
-
- #include "Processor.h"
-
- void typeSelection(void)
- {
-	Processor processorobj;
-	selection2 = typeuser.typeSelection(0);
-
-	switch(selection2)
-	{
-		case 1:
-			processorobj.displayInfo();
-			break;
-	   // And so on...
-	}
-  }
-
-  This keeps these needed functions restricted within the main.cpp source file, thus 
-  meeting the prescribed instructions given in the guidelines PDF.
-*/

@@ -11,24 +11,44 @@
 #ifndef CLASS_USER_INTERFACE_H
 #define CLASS_USER_INTERFACE_H
 
-class UserInterface //: public: Processor
+class UserInterface
 {
 private:
+	/**
+	 * These values are what the user's selection is collectd from in the selection functions.
+	 */
 	int userSelection;
 	int userSelection2;
 public:
+	/**
+	 * This is the default constructor and destructor used for creating objects.
+	 */
 	UserInterface(void);
 	~UserInterface(void);
-
+	
+	/**
+	 * This is the setter and getter for the selection made on the main menu.
+	 */
 	int getUserSelection(void);
 	void setUserSelection(int newSel);
 
+	/**
+	 * This is the setter and getter for the selection made on the submenu.
+	 */
 	int getUserSelection2(void);
 	void setUserSelection2(int newSel2);
 
+	/**
+	 * The first function prints the menu to the console.
+	 * The second function is the logic behind getting the user's input.
+	 */
 	void displayMenu(void);
 	int mainSelection(int userSelection);
 
+	/**
+	 * The first function prints the submenu to the console after collecting the user's main menu input.
+	 * The second function is the logic behind getting the user's input.
+	 */
 	void displayTypesMenu(void);
 	int typeSelection(int userSelection2);
 };

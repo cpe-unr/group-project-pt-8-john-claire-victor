@@ -1,6 +1,16 @@
+/*
+  ===================================================================
+  Project Name: Semester Project
+  Author: Victor A. Percival
+  Date: 05/03/21
+  Filename: Processor.cpp
+  ===================================================================
+*/
+
+
 #include <iostream>
 #include "Processor.h"
-
+  
 int bufferLength = 0;
 int buffer[];
 
