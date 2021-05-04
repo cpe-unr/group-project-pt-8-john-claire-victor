@@ -60,7 +60,7 @@
 		cout << "Data Length: " << wavObj->subChunk2Size << endl;
 		cout << "Audio Format: " << wavObj->audioFormat << endl;
 	}
-	int SoundFile::readFile()
+		int SoundFile::readFile()
 	{
 	    /****  DO NOTHING; actual data is read in EightBit and SixteenBit class
 		inFile = fopen(fname.c_str(), "r");
