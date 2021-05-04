@@ -29,4 +29,4 @@ For my portion of the project, I worked on the implementation of audio normaliza
 **UML Diagram:**
 Please also see UML Diagram.pdf (it didn't fit in this page, since it's a horizontally oriented pdf). 
 
-https://github.com/cpe-unr/group-project-pt-8-john-claire-victor/blob/master/UML%20Diagram.pdf
+![image](https://user-images.githubusercontent.com/70500617/117074869-cd331800-ace8-11eb-9280-722ee2af7280.png)
