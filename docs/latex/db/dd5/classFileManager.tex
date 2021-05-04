@@ -1,0 +1,96 @@
+\hypertarget{classFileManager}{}\section{File\+Manager Class Reference}
+\label{classFileManager}\index{File\+Manager@{File\+Manager}}
+
+
+{\ttfamily \#include $<$File\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFileManager_af7cd3220d7b6b4c78900e591568019b7}{File\+Manager} (string d)
+\item 
+\hyperlink{classFileManager_abaed33b5b0c13b8a597db9335a1aacfa}{$\sim$\+File\+Manager} ()
+\item 
+\hyperlink{structWAV__HEADER}{W\+A\+V\+\_\+\+H\+E\+A\+D\+ER} $\ast$ \hyperlink{classFileManager_a2db2e663db1df9cc19983f1bc642cf3a}{read\+Header} (string fname)
+\item 
+void \hyperlink{classFileManager_a2161783ca1618e76cf37dec25687ea5a}{read\+Files} ()
+\item 
+void \hyperlink{classFileManager_a8c9d83a8d5e00e0f33e9c7bc64ab7c15}{write\+Files} ()
+\item 
+\mbox{\Hypertarget{classFileManager_aaf4a013cb2117f81cb2c2492b1f364b9}\label{classFileManager_aaf4a013cb2117f81cb2c2492b1f364b9}} 
+void {\bfseries print\+Files} ()
+\item 
+void \hyperlink{classFileManager_acc1a9a9b7f5d6009fe953db4cc3b80bd}{add\+File\+Name} (string f)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Created by John Jarvis 4/20/21 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFileManager_af7cd3220d7b6b4c78900e591568019b7}\label{classFileManager_af7cd3220d7b6b4c78900e591568019b7}} 
+\index{File\+Manager@{File\+Manager}!File\+Manager@{File\+Manager}}
+\index{File\+Manager@{File\+Manager}!File\+Manager@{File\+Manager}}
+\subsubsection{\texorpdfstring{File\+Manager()}{FileManager()}}
+{\footnotesize\ttfamily File\+Manager\+::\+File\+Manager (\begin{DoxyParamCaption}\item[{string}]{d }\end{DoxyParamCaption})}
+
+Constructor for my File Manager class 
+\begin{DoxyParams}{Parameters}
+{\em string} & d is what I set \char`\"{}dirpath\char`\"{} (file directory path) too \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileManager_abaed33b5b0c13b8a597db9335a1aacfa}\label{classFileManager_abaed33b5b0c13b8a597db9335a1aacfa}} 
+\index{File\+Manager@{File\+Manager}!````~File\+Manager@{$\sim$\+File\+Manager}}
+\index{````~File\+Manager@{$\sim$\+File\+Manager}!File\+Manager@{File\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+File\+Manager()}{~FileManager()}}
+{\footnotesize\ttfamily File\+Manager\+::$\sim$\+File\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor for filemanager class 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFileManager_acc1a9a9b7f5d6009fe953db4cc3b80bd}\label{classFileManager_acc1a9a9b7f5d6009fe953db4cc3b80bd}} 
+\index{File\+Manager@{File\+Manager}!add\+File\+Name@{add\+File\+Name}}
+\index{add\+File\+Name@{add\+File\+Name}!File\+Manager@{File\+Manager}}
+\subsubsection{\texorpdfstring{add\+File\+Name()}{addFileName()}}
+{\footnotesize\ttfamily void File\+Manager\+::add\+File\+Name (\begin{DoxyParamCaption}\item[{string}]{f }\end{DoxyParamCaption})}
+
+Function that adds the name of every file inputed on the command line. 
+\begin{DoxyParams}{Parameters}
+{\em f} & = filename placeholder. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFileManager_a2161783ca1618e76cf37dec25687ea5a}\label{classFileManager_a2161783ca1618e76cf37dec25687ea5a}} 
+\index{File\+Manager@{File\+Manager}!read\+Files@{read\+Files}}
+\index{read\+Files@{read\+Files}!File\+Manager@{File\+Manager}}
+\subsubsection{\texorpdfstring{read\+Files()}{readFiles()}}
+{\footnotesize\ttfamily void File\+Manager\+::read\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that goes through the file read in with the \char`\"{}\+Read\+Header\char`\"{} function, and checks a specific variable found within the wavheader.\+h file to decide whether it is an 8, or 16 bit, audio file. The function then sends the file data to an appropirate 8/16 bit class for file processing. \mbox{\Hypertarget{classFileManager_a2db2e663db1df9cc19983f1bc642cf3a}\label{classFileManager_a2db2e663db1df9cc19983f1bc642cf3a}} 
+\index{File\+Manager@{File\+Manager}!read\+Header@{read\+Header}}
+\index{read\+Header@{read\+Header}!File\+Manager@{File\+Manager}}
+\subsubsection{\texorpdfstring{read\+Header()}{readHeader()}}
+{\footnotesize\ttfamily \hyperlink{structWAV__HEADER}{W\+A\+V\+\_\+\+H\+E\+A\+D\+ER} $\ast$ File\+Manager\+::read\+Header (\begin{DoxyParamCaption}\item[{string}]{fname }\end{DoxyParamCaption})}
+
+Function that reads the entire W\+AV file, or displays an error if it cannot open the file, or no file is there. 
+\begin{DoxyParams}{Parameters}
+{\em fname} & is the name of the files inputed into the program \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+wav\+Obj = the technical data of the inputed file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileManager_a8c9d83a8d5e00e0f33e9c7bc64ab7c15}\label{classFileManager_a8c9d83a8d5e00e0f33e9c7bc64ab7c15}} 
+\index{File\+Manager@{File\+Manager}!write\+Files@{write\+Files}}
+\index{write\+Files@{write\+Files}!File\+Manager@{File\+Manager}}
+\subsubsection{\texorpdfstring{write\+Files()}{writeFiles()}}
+{\footnotesize\ttfamily void File\+Manager\+::write\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that gets the size of the files inputed, and then sends the data to a writefile function. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+File\+Manager.\+h\item 
+File\+Manager.\+cpp\end{DoxyCompactItemize}

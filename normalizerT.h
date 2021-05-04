@@ -1,3 +1,11 @@
+/*
+  ===================================================================
+  Project Name: Semester Project
+  Author: Claire Burkhardt
+  Date: 4/29/21
+  Filename: normalizerT.h
+  ===================================================================
+*/
 #ifndef NORMALIZERT_H
 #define NORMALIZERT_H
 
@@ -8,8 +16,15 @@ class normalizerProcessor {
     public:
      template <typename T >
 
+/**
+*Claire
+*This normalizer file inputs the buffer and uses audio processing to normalize all sound up to a certain threshold. The max/min/zeroVal/max amplitude (Basically the math) is dependent on 8 bit vs 16 bit, but once those values are determined, the math is calculated in variable form so that it can accomodate stereo/mono and 8/16 bit.
+*@param input the buffer with type unsigned char (8 bit) or short (16 bit). Type is dependant on input from template.
+*@param input the integer value of the buffer's length.
+*/
+
     void processNormalizer (T* buffer, int bufferSize) {
-/* Dr. Lancaster said in class that echo shouldn't segment out the stereo audio channels, so there's no audio processing difference for mono/stereo in this function */
+
 
         unsigned char* EightPlace = NULL;
         signed short* SixteenPlace = NULL;
@@ -18,11 +33,9 @@ class normalizerProcessor {
         int Min;
         int zeroVal;
         float absMaxAmplitude;
-        float newMultiplier;
-//        std::cout << "in normalizer  buffer " << typeid(buffer).name() << " eightPlace " << typeid(SixteenPlace).name() << std::endl;
+        float newMultiplier; 
 
-        if ((typeid(buffer).name()) == typeid(EightPlace).name()) {
-//            std::cout << "YAY in eightplacenormalizer type id" << std::endl;
+        if ((typeid(buffer).name()) == typeid(EightPlace).name()) { 
             Max = 256;
             Min = 0;
             zeroVal = 128;
@@ -37,22 +50,18 @@ class normalizerProcessor {
         }
         int peakAmplitude = 0;
 
-   	for(int idx = 0; idx < bufferSize; idx++) {
-    //    std::cout << Max << std::endl;
+   	for(int idx = 0; idx < bufferSize; idx++) { 
         if ((buffer[idx] < Max) && (buffer[idx] > Min) ) {
     
             if (peakAmplitude < ( std::fabs ( std::fabs(buffer[idx]) - zeroVal) ) )  {
-                peakAmplitude = std::fabs(std::fabs(buffer[idx]) - zeroVal);
-    //            std::cout << peakAmplitude << std::endl;
-    //            std::cout << buffer[idx] << std::endl;
+                peakAmplitude = std::fabs(std::fabs(buffer[idx]) - zeroVal); 
             }
         }
     }
 
 
     newMultiplier = (absMaxAmplitude / peakAmplitude);
-
-//    std::cout << peakAmplitude << " multiplier " << newMultiplier << std::endl;
+ 
     for (int i1 = 0; i1 < bufferSize; ++i1) {
 
         buffer[i1] *= newMultiplier;

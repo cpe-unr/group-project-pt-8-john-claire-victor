@@ -1,0 +1,180 @@
+\hypertarget{classUserInterface}{}\section{User\+Interface Class Reference}
+\label{classUserInterface}\index{User\+Interface@{User\+Interface}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUserInterface_a8b13ec79c20afd56c61280fe63fec837}{User\+Interface} (void)
+\item 
+int \hyperlink{classUserInterface_aaa6d19efa96815f75b6e5a5612c8ac8c}{get\+User\+Selection} (void)
+\item 
+void \hyperlink{classUserInterface_aadd67f3f0d6df7cf20807553c7885ba4}{set\+User\+Selection} (int new\+Sel)
+\item 
+int \hyperlink{classUserInterface_abb90cb9da4b550fa8c0d894f5b433f7f}{get\+User\+Selection2} (void)
+\item 
+void \hyperlink{classUserInterface_a67883828a7799bf677ab953303d96476}{set\+User\+Selection2} (int new\+Sel2)
+\item 
+void \hyperlink{classUserInterface_a5145df77b2081085c4ecb264eb718870}{display\+Menu} (void)
+\item 
+int \hyperlink{classUserInterface_a1d21e648944c255f3879133b26a9c454}{main\+Selection} (int user\+Selection)
+\item 
+void \hyperlink{classUserInterface_ac78627be5f915f61d87bec9abe6da205}{display\+Types\+Menu} (void)
+\item 
+int \hyperlink{classUserInterface_a7d5f75f5cadeb5fd99a912f29f918537}{type\+Selection} ()
+\item 
+int \hyperlink{classUserInterface_a370e52a3e34615a3b5e350d6f83e2011}{choose\+Audio\+Processing} ()
+\item 
+int \hyperlink{classUserInterface_a6e5d84fffdada2902b796774249a35e8}{user\+Choosing\+File} (std\+::vector$<$ std\+::string $>$ \&audio\+File\+Name\+Vec)
+\item 
+std\+::string \hyperlink{classUserInterface_a270f8ab101d5d94d556cdea6a7ae9a62}{new\+File} (std\+::vector$<$ std\+::string $>$ \&audio\+File\+Name\+Vec)
+\item 
+void \hyperlink{classUserInterface_a17bacd55dbd5519b84be8c0c1b996e1c}{bad\+Execution} ()
+\item 
+void \hyperlink{classUserInterface_ae0937ae35d829ae8e97fac892106a794}{unfinished\+Metadata} ()
+\item 
+void \hyperlink{classUserInterface_ab7b18b692475bb7f0e420b6c45f68964}{unfinished\+C\+SV} ()
+\item 
+void \hyperlink{classUserInterface_a2280ccd4003f2de2ace9ca1dd388d394}{C\+S\+V\+Success} ()
+\item 
+void \hyperlink{classUserInterface_a929a7747d6ea48b93fde9b6cbc4cb584}{exit\+Message} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUserInterface_a8b13ec79c20afd56c61280fe63fec837}\label{classUserInterface_a8b13ec79c20afd56c61280fe63fec837}} 
+\index{User\+Interface@{User\+Interface}!User\+Interface@{User\+Interface}}
+\index{User\+Interface@{User\+Interface}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{User\+Interface()}{UserInterface()}}
+{\footnotesize\ttfamily User\+Interface\+::\+User\+Interface (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This is the default constructor and destructor used for creating objects. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classUserInterface_a17bacd55dbd5519b84be8c0c1b996e1c}\label{classUserInterface_a17bacd55dbd5519b84be8c0c1b996e1c}} 
+\index{User\+Interface@{User\+Interface}!bad\+Execution@{bad\+Execution}}
+\index{bad\+Execution@{bad\+Execution}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{bad\+Execution()}{badExecution()}}
+{\footnotesize\ttfamily void User\+Interface\+::bad\+Execution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Claire Error message that appears when the user does not input any audio files when they first run the program. Warns the user, provides proper syntax, \& ends the program \mbox{\Hypertarget{classUserInterface_a370e52a3e34615a3b5e350d6f83e2011}\label{classUserInterface_a370e52a3e34615a3b5e350d6f83e2011}} 
+\index{User\+Interface@{User\+Interface}!choose\+Audio\+Processing@{choose\+Audio\+Processing}}
+\index{choose\+Audio\+Processing@{choose\+Audio\+Processing}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{choose\+Audio\+Processing()}{chooseAudioProcessing()}}
+{\footnotesize\ttfamily int User\+Interface\+::choose\+Audio\+Processing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Claire Has the user choose what type of audio processing they would like to do \begin{DoxyReturn}{Returns}
+the integer representative of the respective audio processing choice (1 -\/ echo, 2 -\/ noise gate, 3 -\/ normalizeR) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUserInterface_a2280ccd4003f2de2ace9ca1dd388d394}\label{classUserInterface_a2280ccd4003f2de2ace9ca1dd388d394}} 
+\index{User\+Interface@{User\+Interface}!C\+S\+V\+Success@{C\+S\+V\+Success}}
+\index{C\+S\+V\+Success@{C\+S\+V\+Success}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{C\+S\+V\+Success()}{CSVSuccess()}}
+{\footnotesize\ttfamily void User\+Interface\+::\+C\+S\+V\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Claire A message telling the user that their C\+SV file has sucessfully been made and exportered \mbox{\Hypertarget{classUserInterface_a5145df77b2081085c4ecb264eb718870}\label{classUserInterface_a5145df77b2081085c4ecb264eb718870}} 
+\index{User\+Interface@{User\+Interface}!display\+Menu@{display\+Menu}}
+\index{display\+Menu@{display\+Menu}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{display\+Menu()}{displayMenu()}}
+{\footnotesize\ttfamily void User\+Interface\+::display\+Menu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+The first function prints the menu to the console. The second function is the logic behind getting the user\textquotesingle{}s input.
+
+This is the main menu that is displayed to the user upon running the program. The first two selections will display another menu that asks the user for an audio format. \mbox{\Hypertarget{classUserInterface_ac78627be5f915f61d87bec9abe6da205}\label{classUserInterface_ac78627be5f915f61d87bec9abe6da205}} 
+\index{User\+Interface@{User\+Interface}!display\+Types\+Menu@{display\+Types\+Menu}}
+\index{display\+Types\+Menu@{display\+Types\+Menu}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{display\+Types\+Menu()}{displayTypesMenu()}}
+{\footnotesize\ttfamily void User\+Interface\+::display\+Types\+Menu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+The first function prints the submenu to the console after collecting the user\textquotesingle{}s main menu input. The second function is the logic behind getting the user\textquotesingle{}s input.
+
+This is the displayed menu for a secondary selection unpon selecting one of the first two choices. Depending on which of the two selections the user made, each of these will perform that analysis for the specified audio type. The first two selections will display another menu that asks the user for an audio format. \mbox{\Hypertarget{classUserInterface_a929a7747d6ea48b93fde9b6cbc4cb584}\label{classUserInterface_a929a7747d6ea48b93fde9b6cbc4cb584}} 
+\index{User\+Interface@{User\+Interface}!exit\+Message@{exit\+Message}}
+\index{exit\+Message@{exit\+Message}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{exit\+Message()}{exitMessage()}}
+{\footnotesize\ttfamily void User\+Interface\+::exit\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Claire A message to the user informing them that the program is ending. \mbox{\Hypertarget{classUserInterface_aaa6d19efa96815f75b6e5a5612c8ac8c}\label{classUserInterface_aaa6d19efa96815f75b6e5a5612c8ac8c}} 
+\index{User\+Interface@{User\+Interface}!get\+User\+Selection@{get\+User\+Selection}}
+\index{get\+User\+Selection@{get\+User\+Selection}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{get\+User\+Selection()}{getUserSelection()}}
+{\footnotesize\ttfamily int User\+Interface\+::get\+User\+Selection (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This is the setter and getter for the selection made on the main menu.
+
+This is the getter for first main menu user selection. \mbox{\Hypertarget{classUserInterface_abb90cb9da4b550fa8c0d894f5b433f7f}\label{classUserInterface_abb90cb9da4b550fa8c0d894f5b433f7f}} 
+\index{User\+Interface@{User\+Interface}!get\+User\+Selection2@{get\+User\+Selection2}}
+\index{get\+User\+Selection2@{get\+User\+Selection2}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{get\+User\+Selection2()}{getUserSelection2()}}
+{\footnotesize\ttfamily int User\+Interface\+::get\+User\+Selection2 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This is the setter and getter for the selection made on the submenu.
+
+This is the getter that will be used for the proceeding menu. \mbox{\Hypertarget{classUserInterface_a1d21e648944c255f3879133b26a9c454}\label{classUserInterface_a1d21e648944c255f3879133b26a9c454}} 
+\index{User\+Interface@{User\+Interface}!main\+Selection@{main\+Selection}}
+\index{main\+Selection@{main\+Selection}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{main\+Selection()}{mainSelection()}}
+{\footnotesize\ttfamily int User\+Interface\+::main\+Selection (\begin{DoxyParamCaption}\item[{int}]{user\+Selection }\end{DoxyParamCaption})}
+
+If the user does not select an option between 0 and 3, an error message will be displayed and the user will be asked to make a correct selection. This will loop until the user makes a correct selection. \mbox{\Hypertarget{classUserInterface_a270f8ab101d5d94d556cdea6a7ae9a62}\label{classUserInterface_a270f8ab101d5d94d556cdea6a7ae9a62}} 
+\index{User\+Interface@{User\+Interface}!new\+File@{new\+File}}
+\index{new\+File@{new\+File}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{new\+File()}{newFile()}}
+{\footnotesize\ttfamily std\+::string User\+Interface\+::new\+File (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{audio\+File\+Name\+Vec }\end{DoxyParamCaption})}
+
+Claire Has the user select a file name to save their new file as; ensures this new file name is not a duplicate 
+\begin{DoxyParams}{Parameters}
+{\em the} & vector list of filenames read in to the program when the user runs the executable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the string for the non-\/duplicate new file name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUserInterface_aadd67f3f0d6df7cf20807553c7885ba4}\label{classUserInterface_aadd67f3f0d6df7cf20807553c7885ba4}} 
+\index{User\+Interface@{User\+Interface}!set\+User\+Selection@{set\+User\+Selection}}
+\index{set\+User\+Selection@{set\+User\+Selection}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{set\+User\+Selection()}{setUserSelection()}}
+{\footnotesize\ttfamily void User\+Interface\+::set\+User\+Selection (\begin{DoxyParamCaption}\item[{int}]{new\+Sel }\end{DoxyParamCaption})}
+
+This is the setter for first main menu user selection. \mbox{\Hypertarget{classUserInterface_a67883828a7799bf677ab953303d96476}\label{classUserInterface_a67883828a7799bf677ab953303d96476}} 
+\index{User\+Interface@{User\+Interface}!set\+User\+Selection2@{set\+User\+Selection2}}
+\index{set\+User\+Selection2@{set\+User\+Selection2}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{set\+User\+Selection2()}{setUserSelection2()}}
+{\footnotesize\ttfamily void User\+Interface\+::set\+User\+Selection2 (\begin{DoxyParamCaption}\item[{int}]{new\+Sel2 }\end{DoxyParamCaption})}
+
+This is the setter that will be used for the proceeding menu. \mbox{\Hypertarget{classUserInterface_a7d5f75f5cadeb5fd99a912f29f918537}\label{classUserInterface_a7d5f75f5cadeb5fd99a912f29f918537}} 
+\index{User\+Interface@{User\+Interface}!type\+Selection@{type\+Selection}}
+\index{type\+Selection@{type\+Selection}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{type\+Selection()}{typeSelection()}}
+{\footnotesize\ttfamily int User\+Interface\+::type\+Selection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This is similar to the logic for ensuring the user makes a valid selection in the main menu. If the user does not select an option between 0 and 8, an error message will be displayed and the user will be asked to make a correct selection. This will loop until the user makes a correct selection. \mbox{\Hypertarget{classUserInterface_ab7b18b692475bb7f0e420b6c45f68964}\label{classUserInterface_ab7b18b692475bb7f0e420b6c45f68964}} 
+\index{User\+Interface@{User\+Interface}!unfinished\+C\+SV@{unfinished\+C\+SV}}
+\index{unfinished\+C\+SV@{unfinished\+C\+SV}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{unfinished\+C\+S\+V()}{unfinishedCSV()}}
+{\footnotesize\ttfamily void User\+Interface\+::unfinished\+C\+SV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Claire A placeholder for where the File I/O for the C\+SV writer would be in the program. \mbox{\Hypertarget{classUserInterface_ae0937ae35d829ae8e97fac892106a794}\label{classUserInterface_ae0937ae35d829ae8e97fac892106a794}} 
+\index{User\+Interface@{User\+Interface}!unfinished\+Metadata@{unfinished\+Metadata}}
+\index{unfinished\+Metadata@{unfinished\+Metadata}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{unfinished\+Metadata()}{unfinishedMetadata()}}
+{\footnotesize\ttfamily void User\+Interface\+::unfinished\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Claire A placeholder for where the File I/O for the metadata would be in the program. \mbox{\Hypertarget{classUserInterface_a6e5d84fffdada2902b796774249a35e8}\label{classUserInterface_a6e5d84fffdada2902b796774249a35e8}} 
+\index{User\+Interface@{User\+Interface}!user\+Choosing\+File@{user\+Choosing\+File}}
+\index{user\+Choosing\+File@{user\+Choosing\+File}!User\+Interface@{User\+Interface}}
+\subsubsection{\texorpdfstring{user\+Choosing\+File()}{userChoosingFile()}}
+{\footnotesize\ttfamily int User\+Interface\+::user\+Choosing\+File (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{audio\+File\+Name\+Vec }\end{DoxyParamCaption})}
+
+Claire Displays a list of files that have been loaded into the program and instructs the user to choose which of those files they would like to modify/process 
+\begin{DoxyParams}{Parameters}
+{\em the} & vector list of filenames read in when the user runs the executable and first loads audio files \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the integer representative of the respective file 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+User\+Interface.\+h\item 
+User\+Interface.\+cpp\end{DoxyCompactItemize}

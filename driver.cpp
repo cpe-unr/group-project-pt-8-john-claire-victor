@@ -1,3 +1,13 @@
+/*
+  ===================================================================
+  Project Name: Semester Project
+  Author: Claire Burkhardt
+  Date: 5/3/21
+  Filename: Driver.cpp
+  ===================================================================
+*/
+
+
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -13,7 +23,12 @@
 
 
 using namespace std;
-
+/*
+*Claire
+*@param number of commmand line arguments
+*@param array of strings of command line arguments
+*Main application entry point. First, the program reads in the audio files. Then, it presents the user with a list of options of audio-related things to do, and walks the user through those actions based on the user's choices.
+*/
 
 int main( int argc, char* argv []) {
 	vector <string> audioFileNameVec;
@@ -45,7 +60,9 @@ int main( int argc, char* argv []) {
 		}
 
 //		fmgrObj.readFiles();
-/**The file I/O in this program is all commented out and replaced with placeholders because the File I/O, while set up, has a segmentation fault that prevents the program from running. **/
+
+/**The file I/O in this program is all commented out and replaced with placeholders because the File I/O, while set up, has a segmentation fault that prevents the program from running. */
+
 //fmgrObj.printFiles();
 		
 

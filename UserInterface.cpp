@@ -1,8 +1,8 @@
 /*
   ===================================================================
   Project Name: Semester Project
-  Author: Victor A. Percival
-  Date: 04/24/21
+  Author: Victor A. Percival; Claire Burkhardt
+  Date: 04/24/21; 5/3/21
   Filename: UserInterface.cpp
   ===================================================================
 */
@@ -147,6 +147,8 @@ int UserInterface::typeSelection()
 	return userSelectionI;
 }
 
+//I deleted a ton of code for functions UserInterface and typeSelection and a few others that were built in the main file of the user interface but didn't work when refactored and had some global variables (I think) that they were predicated on. See the folder 'User Interface' for Victor's original version of this User Interface. I modified userSelection and wrote chooseAudioProcessing, userChoosingFile, badExecution, newFile, unfinishedMetadata/CSV, and exitMessage --Claire
+
 
 int UserInterface::chooseAudioProcessing() {
 	std::cout << "*** AUDIO Processing ***" << std::endl;
@@ -228,4 +230,3 @@ void UserInterface::exitMessage() {
 }
 
 
-//I deleted a ton of code for functions UserInterface and typeSelection and a few others that were built in the main file of the user interface but didn't work when refactored and had some global variables (I think) that they were predicated on. See the folder 'User Interface' for Victor's original version of this User Interface. I modified userSelection and wrote chooseAudioProcessing, userChoosingFile, badExecution, newFile, unfinishedMetadata/CSV, and exitMessage --Claire

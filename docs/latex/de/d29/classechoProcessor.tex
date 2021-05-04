@@ -1,0 +1,31 @@
+\hypertarget{classechoProcessor}{}\section{echo\+Processor Class Reference}
+\label{classechoProcessor}\index{echo\+Processor@{echo\+Processor}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classechoProcessor_a94a5b56b4f4285682a4a0f84b6741f3c}{process\+Echo} (T $\ast$buffer, int buffer\+Size, uint16\+\_\+t num\+Of\+Chan)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classechoProcessor_a94a5b56b4f4285682a4a0f84b6741f3c}\label{classechoProcessor_a94a5b56b4f4285682a4a0f84b6741f3c}} 
+\index{echo\+Processor@{echo\+Processor}!process\+Echo@{process\+Echo}}
+\index{process\+Echo@{process\+Echo}!echo\+Processor@{echo\+Processor}}
+\subsubsection{\texorpdfstring{process\+Echo()}{processEcho()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void echo\+Processor\+::process\+Echo (\begin{DoxyParamCaption}\item[{T $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{uint16\+\_\+t}]{num\+Of\+Chan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Claire This echo file inputs the buffer and uses audio processing to add an echo. The max/min/zero\+Val (Basically the math) is dependent on 8 bit vs 16 bit, but once those values are determined, the math is calculated in variable form so that it can accomodate stereo/mono and 8/16 bit. Dr. Lancaster said in class that the echo processing shouldn\textquotesingle{}t segment out the stereo audio channels, so there\textquotesingle{}s no audio processing difference for mono/stereo in this function 
+\begin{DoxyParams}{Parameters}
+{\em input} & the buffer with type unsigned char (8 bit) or short (16 bit). Type is dependant on input from template \\
+\hline
+{\em input} & the integer value of the buffer\textquotesingle{}s length \\
+\hline
+{\em input} & whether the buffer is stereo or mono (2 or 1) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+echo\+T.\+h\end{DoxyCompactItemize}

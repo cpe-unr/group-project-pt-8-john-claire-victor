@@ -1,0 +1,60 @@
+\hypertarget{classFileInterface}{}\section{File\+Interface Class Reference}
+\label{classFileInterface}\index{File\+Interface@{File\+Interface}}
+
+
+{\ttfamily \#include $<$File\+Interface.\+h$>$}
+
+
+
+Inheritance diagram for File\+Interface\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classFileInterface_acfd092493ecf4f466d57721fbfdd8b23}{print\+Header} ()=0
+\item 
+virtual int \hyperlink{classFileInterface_ad6a8364f2255b7d724622eb8828b2c1c}{read\+File} ()=0
+\item 
+virtual void \hyperlink{classFileInterface_a46344a063894f43e2594f4dca786756a}{write\+File} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Created by John Jarvis 4/20/21 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFileInterface_acfd092493ecf4f466d57721fbfdd8b23}\label{classFileInterface_acfd092493ecf4f466d57721fbfdd8b23}} 
+\index{File\+Interface@{File\+Interface}!print\+Header@{print\+Header}}
+\index{print\+Header@{print\+Header}!File\+Interface@{File\+Interface}}
+\subsubsection{\texorpdfstring{print\+Header()}{printHeader()}}
+{\footnotesize\ttfamily virtual void File\+Interface\+::print\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+BC that all classes that inherit this must use. Function is used to print the technical contents of a W\+AV file. 
+
+Implemented in \hyperlink{classSoundFile_a44b17fb295a9918410c7ec4242370ef9}{Sound\+File}.
+
+\mbox{\Hypertarget{classFileInterface_ad6a8364f2255b7d724622eb8828b2c1c}\label{classFileInterface_ad6a8364f2255b7d724622eb8828b2c1c}} 
+\index{File\+Interface@{File\+Interface}!read\+File@{read\+File}}
+\index{read\+File@{read\+File}!File\+Interface@{File\+Interface}}
+\subsubsection{\texorpdfstring{read\+File()}{readFile()}}
+{\footnotesize\ttfamily virtual int File\+Interface\+::read\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+BC that all classes that inherit this must use. Function is used to read the contents of a wav fie. 
+
+Implemented in \hyperlink{classSixteenbit_ab34f06b23dabdf172f1c0990c5648ff1}{Sixteenbit}, \hyperlink{classEightbit_a52c70b7685cfca5f810d441a20ec5745}{Eightbit}, \hyperlink{classSoundFile_a35eb7dfeadb241c8ab4477ff1370dd5b}{Sound\+File}, and \hyperlink{classEightbit_a52c70b7685cfca5f810d441a20ec5745}{Eightbit}.
+
+\mbox{\Hypertarget{classFileInterface_a46344a063894f43e2594f4dca786756a}\label{classFileInterface_a46344a063894f43e2594f4dca786756a}} 
+\index{File\+Interface@{File\+Interface}!write\+File@{write\+File}}
+\index{write\+File@{write\+File}!File\+Interface@{File\+Interface}}
+\subsubsection{\texorpdfstring{write\+File()}{writeFile()}}
+{\footnotesize\ttfamily virtual void File\+Interface\+::write\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+BC that all classes that inherit this must use. Function is used to write the contents of a wav file. 
+
+Implemented in \hyperlink{classSoundFile_aaaa496c20586d179906a301f0b4ab3a5}{Sound\+File}, and \hyperlink{classEightbit_a7d5ab91f909b7c7f3fc48fdffbc3c57c}{Eightbit}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+File\+Interface.\+h\end{DoxyCompactItemize}

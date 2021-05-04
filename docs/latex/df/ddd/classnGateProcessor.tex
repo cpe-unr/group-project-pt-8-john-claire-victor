@@ -1,0 +1,29 @@
+\hypertarget{classnGateProcessor}{}\section{n\+Gate\+Processor Class Reference}
+\label{classnGateProcessor}\index{n\+Gate\+Processor@{n\+Gate\+Processor}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classnGateProcessor_a3cbd26f67a293af6364a57ef5160517e}{process\+Noise} (T $\ast$buffer, int buffer\+Size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnGateProcessor_a3cbd26f67a293af6364a57ef5160517e}\label{classnGateProcessor_a3cbd26f67a293af6364a57ef5160517e}} 
+\index{n\+Gate\+Processor@{n\+Gate\+Processor}!process\+Noise@{process\+Noise}}
+\index{process\+Noise@{process\+Noise}!n\+Gate\+Processor@{n\+Gate\+Processor}}
+\subsubsection{\texorpdfstring{process\+Noise()}{processNoise()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void n\+Gate\+Processor\+::process\+Noise (\begin{DoxyParamCaption}\item[{T $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Claire This noise gate file inputs the buffer and uses audio processing to decrease all sound below a certain threshold (like 5\% of the max value) to 0. The max/min/zero\+Val (Basically the math) is dependent on 8 bit vs 16 bit, but once those values are determined, the math is calculated in variable form so that it can accomodate stereo/mono and 8/16 bit. Mono/stereo is irrelevant, since we\textquotesingle{}re still gating all noise below a threshold regardless of which channel it comes from. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the buffer with type unsigned char (8 bit) or short (16 bit). Type is dependant on input from template. \\
+\hline
+{\em input} & the integer value of the buffer\textquotesingle{}s length. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+n\+Gate\+T.\+h\end{DoxyCompactItemize}
