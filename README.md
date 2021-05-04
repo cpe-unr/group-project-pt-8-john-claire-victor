@@ -11,8 +11,7 @@ John J. – File I/O
 Victor P. – User interface, UML diagram
 
 **Doxygen Page**
-https://github.com/cburkhardt27/cs202-semester-project/blob/main/docs/html/index.html
-
+https://cburkhardt27.github.io/cs202-semester-project/html/index.html
 
 **Brief Description of the Design:**
 
