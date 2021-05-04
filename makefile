@@ -1,5 +1,5 @@
 semesterProjectExecutable: driver.cpp WavHeader.h FileManager.h echoT.h nGateT.h normalizerT.h UserInterface.o FileManager.o EightBit.o SixteenBit.o SoundFile.o
-	g++ -std=c++11 driver.cpp UserInterface.o FileManager.o EightBit.o SixteenBit.o SoundFile.o -o ptest
+	g++ -std=c++11 driver.cpp UserInterface.o FileManager.o EightBit.o SixteenBit.o SoundFile.o -o semesterProjectExecutable
 
 FileManager.o: FileManager.cpp FileManager.h WavHeader.h FileInterface.h
 	g++ -c -std=c++11 FileManager.cpp
