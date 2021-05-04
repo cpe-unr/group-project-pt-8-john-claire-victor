@@ -58,6 +58,8 @@ public:
 	*@return
 	**/
 	SoundFile();
+	int readFile();
+	void writeFile();
 };
 class Eightbit : public SoundFile
 {
