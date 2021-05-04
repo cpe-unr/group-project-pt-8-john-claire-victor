@@ -1,0 +1,90 @@
+\hypertarget{classEightbit}{}\section{Eightbit Class Reference}
+\label{classEightbit}\index{Eightbit@{Eightbit}}
+
+
+Inheritance diagram for Eightbit\+:
+% FIG 0
+
+
+Collaboration diagram for Eightbit\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEightbit_aa1de2bbbb0e66eb40802af79c333403c}\label{classEightbit_aa1de2bbbb0e66eb40802af79c333403c}} 
+{\bfseries Eightbit} (string n)
+\item 
+\mbox{\Hypertarget{classEightbit_a52c70b7685cfca5f810d441a20ec5745}\label{classEightbit_a52c70b7685cfca5f810d441a20ec5745}} 
+int {\bfseries read\+File} ()
+\item 
+\mbox{\Hypertarget{classEightbit_a7d5ab91f909b7c7f3fc48fdffbc3c57c}\label{classEightbit_a7d5ab91f909b7c7f3fc48fdffbc3c57c}} 
+void {\bfseries write\+File} ()
+\item 
+\hyperlink{classEightbit_aa1de2bbbb0e66eb40802af79c333403c}{Eightbit} (string n)
+\item 
+\hyperlink{classEightbit_a5d34528d00141c120f1a774b3db30565}{$\sim$\+Eightbit} ()
+\item 
+int \hyperlink{classEightbit_a52c70b7685cfca5f810d441a20ec5745}{read\+File} ()
+\item 
+void \hyperlink{classEightbit_ac9cd9923a769bfad363049f95010c9c3}{write\+File} (const std\+::string \&out\+File\+Name)
+\item 
+\hyperlink{classEightbit_a7045374ccf36968110b44e06d88b246f}{Eightbit} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEightbit_aa1de2bbbb0e66eb40802af79c333403c}\label{classEightbit_aa1de2bbbb0e66eb40802af79c333403c}} 
+\index{Eightbit@{Eightbit}!Eightbit@{Eightbit}}
+\index{Eightbit@{Eightbit}!Eightbit@{Eightbit}}
+\subsubsection{\texorpdfstring{Eightbit()}{Eightbit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Eightbit\+::\+Eightbit (\begin{DoxyParamCaption}\item[{string}]{n }\end{DoxyParamCaption})}
+
+Parameterized constructor that initializes a variable from the parent sound\+File class 
+\begin{DoxyParams}{Parameters}
+{\em string} & n is the file name that is then set to the fname variable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEightbit_a5d34528d00141c120f1a774b3db30565}\label{classEightbit_a5d34528d00141c120f1a774b3db30565}} 
+\index{Eightbit@{Eightbit}!````~Eightbit@{$\sim$\+Eightbit}}
+\index{````~Eightbit@{$\sim$\+Eightbit}!Eightbit@{Eightbit}}
+\subsubsection{\texorpdfstring{$\sim$\+Eightbit()}{~Eightbit()}}
+{\footnotesize\ttfamily Eightbit\+::$\sim$\+Eightbit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor for \hyperlink{classSixteenbit}{Sixteenbit} \mbox{\Hypertarget{classEightbit_a7045374ccf36968110b44e06d88b246f}\label{classEightbit_a7045374ccf36968110b44e06d88b246f}} 
+\index{Eightbit@{Eightbit}!Eightbit@{Eightbit}}
+\index{Eightbit@{Eightbit}!Eightbit@{Eightbit}}
+\subsubsection{\texorpdfstring{Eightbit()}{Eightbit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Eightbit\+::\+Eightbit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEightbit_a52c70b7685cfca5f810d441a20ec5745}\label{classEightbit_a52c70b7685cfca5f810d441a20ec5745}} 
+\index{Eightbit@{Eightbit}!read\+File@{read\+File}}
+\index{read\+File@{read\+File}!Eightbit@{Eightbit}}
+\subsubsection{\texorpdfstring{read\+File()}{readFile()}}
+{\footnotesize\ttfamily int Eightbit\+::read\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function that reads the sound file so it can be used to create sound. 
+
+Implements \hyperlink{classFileInterface}{File\+Interface}.
+
+\mbox{\Hypertarget{classEightbit_ac9cd9923a769bfad363049f95010c9c3}\label{classEightbit_ac9cd9923a769bfad363049f95010c9c3}} 
+\index{Eightbit@{Eightbit}!write\+File@{write\+File}}
+\index{write\+File@{write\+File}!Eightbit@{Eightbit}}
+\subsubsection{\texorpdfstring{write\+File()}{writeFile()}}
+{\footnotesize\ttfamily void Eightbit\+::write\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{out\+File\+Name }\end{DoxyParamCaption})}
+
+Function that is supposed to write out the sound file. 
+\begin{DoxyParams}{Parameters}
+{\em out\+File\+Name} & = name of the new wav file outputed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Eight\+Bit.\+h\item 
+Sound\+File.\+h\item 
+Eight\+Bit.\+cpp\end{DoxyCompactItemize}

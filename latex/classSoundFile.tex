@@ -1,0 +1,128 @@
+\hypertarget{classSoundFile}{}\section{Sound\+File Class Reference}
+\label{classSoundFile}\index{Sound\+File@{Sound\+File}}
+
+
+Inheritance diagram for Sound\+File\+:
+% FIG 0
+
+
+Collaboration diagram for Sound\+File\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classSoundFile_a44b17fb295a9918410c7ec4242370ef9}{print\+Header} ()
+\item 
+void \hyperlink{classSoundFile_ab867a2098653a80f9eb89d39b4ad3f03}{set\+Header} (\hyperlink{structWAV__HEADER}{W\+A\+V\+\_\+\+H\+E\+A\+D\+ER} $\ast$obj, string fn)
+\item 
+\hyperlink{classSoundFile_ad51984b0112e70cae3158b17ab2e3466}{Sound\+File} (string n)
+\item 
+\hyperlink{classSoundFile_a2a4cc3a7780cc699e1ef51fc98f5d846}{$\sim$\+Sound\+File} ()
+\item 
+\hyperlink{classSoundFile_a6b4a3ffaf85f0f60b8c311185ea8bd58}{Sound\+File} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classSoundFile_a0455dae80379afda92f2900a74b4f44a}{get\+File\+Size} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSoundFile_ac34b46bf2c239d2648306a965bacb264}\label{classSoundFile_ac34b46bf2c239d2648306a965bacb264}} 
+string {\bfseries fname}
+\item 
+\mbox{\Hypertarget{classSoundFile_aea1d25c118ce931996eaf4c1bdbf8856}\label{classSoundFile_aea1d25c118ce931996eaf4c1bdbf8856}} 
+\hyperlink{structWAV__HEADER}{W\+A\+V\+\_\+\+H\+E\+A\+D\+ER} $\ast$ {\bfseries wav\+Obj}
+\item 
+\mbox{\Hypertarget{classSoundFile_a5a4ae3b5a9f6d5e74a5049a8597ac260}\label{classSoundFile_a5a4ae3b5a9f6d5e74a5049a8597ac260}} 
+F\+I\+LE $\ast$ {\bfseries in\+File}
+\item 
+\mbox{\Hypertarget{classSoundFile_af79618b6e627b20b3c948d054156f4a4}\label{classSoundFile_af79618b6e627b20b3c948d054156f4a4}} 
+int {\bfseries file\+Size}
+\item 
+\mbox{\Hypertarget{classSoundFile_a2b0a6c8abf5161292caf408efcc659d9}\label{classSoundFile_a2b0a6c8abf5161292caf408efcc659d9}} 
+size\+\_\+t {\bfseries bytes\+Read}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSoundFile_ad51984b0112e70cae3158b17ab2e3466}\label{classSoundFile_ad51984b0112e70cae3158b17ab2e3466}} 
+\index{Sound\+File@{Sound\+File}!Sound\+File@{Sound\+File}}
+\index{Sound\+File@{Sound\+File}!Sound\+File@{Sound\+File}}
+\subsubsection{\texorpdfstring{Sound\+File()}{SoundFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sound\+File\+::\+Sound\+File (\begin{DoxyParamCaption}\item[{string}]{n }\end{DoxyParamCaption})}
+
+Parameterized constructor for \hyperlink{classSoundFile}{Sound\+File} 
+\begin{DoxyParams}{Parameters}
+{\em n} & = placeholder that takes the name of the inputed file and sets it equal to fname. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSoundFile_a2a4cc3a7780cc699e1ef51fc98f5d846}\label{classSoundFile_a2a4cc3a7780cc699e1ef51fc98f5d846}} 
+\index{Sound\+File@{Sound\+File}!````~Sound\+File@{$\sim$\+Sound\+File}}
+\index{````~Sound\+File@{$\sim$\+Sound\+File}!Sound\+File@{Sound\+File}}
+\subsubsection{\texorpdfstring{$\sim$\+Sound\+File()}{~SoundFile()}}
+{\footnotesize\ttfamily Sound\+File\+::$\sim$\+Sound\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor for \hyperlink{classSoundFile}{Sound\+File} \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSoundFile_a6b4a3ffaf85f0f60b8c311185ea8bd58}\label{classSoundFile_a6b4a3ffaf85f0f60b8c311185ea8bd58}} 
+\index{Sound\+File@{Sound\+File}!Sound\+File@{Sound\+File}}
+\index{Sound\+File@{Sound\+File}!Sound\+File@{Sound\+File}}
+\subsubsection{\texorpdfstring{Sound\+File()}{SoundFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sound\+File\+::\+Sound\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor for \hyperlink{classSoundFile}{Sound\+File} \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSoundFile_a0455dae80379afda92f2900a74b4f44a}\label{classSoundFile_a0455dae80379afda92f2900a74b4f44a}} 
+\index{Sound\+File@{Sound\+File}!get\+File\+Size@{get\+File\+Size}}
+\index{get\+File\+Size@{get\+File\+Size}!Sound\+File@{Sound\+File}}
+\subsubsection{\texorpdfstring{get\+File\+Size()}{getFileSize()}}
+{\footnotesize\ttfamily int Sound\+File\+::get\+File\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Gets the file size(s) for inputed file(s), and then returns the size of the files for future use. Made protected so that my child classes can use the file size aswell. \begin{DoxyReturn}{Returns}
+file\+Size = size of all inputed file(s), int value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSoundFile_a44b17fb295a9918410c7ec4242370ef9}\label{classSoundFile_a44b17fb295a9918410c7ec4242370ef9}} 
+\index{Sound\+File@{Sound\+File}!print\+Header@{print\+Header}}
+\index{print\+Header@{print\+Header}!Sound\+File@{Sound\+File}}
+\subsubsection{\texorpdfstring{print\+Header()}{printHeader()}}
+{\footnotesize\ttfamily void Sound\+File\+::print\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prints the technical data of a W\+AV file. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+F\+MT chunk 
+
+Implements \hyperlink{classFileInterface}{File\+Interface}.
+
+\mbox{\Hypertarget{classSoundFile_ab867a2098653a80f9eb89d39b4ad3f03}\label{classSoundFile_ab867a2098653a80f9eb89d39b4ad3f03}} 
+\index{Sound\+File@{Sound\+File}!set\+Header@{set\+Header}}
+\index{set\+Header@{set\+Header}!Sound\+File@{Sound\+File}}
+\subsubsection{\texorpdfstring{set\+Header()}{setHeader()}}
+{\footnotesize\ttfamily void Sound\+File\+::set\+Header (\begin{DoxyParamCaption}\item[{\hyperlink{structWAV__HEADER}{W\+A\+V\+\_\+\+H\+E\+A\+D\+ER} $\ast$}]{obj,  }\item[{string}]{fn }\end{DoxyParamCaption})}
+
+Setter for sound\+File variables. 
+\begin{DoxyParams}{Parameters}
+{\em obj} & = war\+\_\+header object so that this class can use wav\+\_\+header variables \\
+\hline
+{\em fn} & = filename inputed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sound\+File.\+h\item 
+Sound\+File.\+cpp\end{DoxyCompactItemize}
