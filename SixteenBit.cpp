@@ -9,7 +9,6 @@
 
 	int Sixteenbit::readFile()
 	{
-		cout << "16-bit readfile called" << endl;
 		 std::ifstream file(fname,std::ios::binary | std::ios::in);
 	    if(file.is_open()){
 		//file.read((char*)&wavObj, sizeof(wav_hdr));
